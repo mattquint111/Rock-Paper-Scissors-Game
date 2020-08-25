@@ -22,6 +22,25 @@
               return computerChoice;
           }
 
+          function playGame() {
+            let playerSelection = prompt("Please choose one: rock, paper, scissors");
+
+            let computerSelection = computerPlay();
+            playerSelection = playerSelection.toLowerCase();
+            let outcome = '';
+
+            if (playerSelection == 'rock' && computerSelection == 'rock') outcome = 'TIE';
+            else if (playerSelection == 'rock' && computerSelection == 'paper') outcome = 'WIN';
+            else if (playerSelection == 'rock' && computerSelection == 'scissors') outcome = 'LOSE';
+            else if (playerSelection == 'paper' && computerSelection == 'paper') outcome = 'TIE';
+            else if (playerSelection == 'paper' && computerSelection == 'rock') outcome = 'WIN';
+            else if (playerSelection == 'paper' && computerSelection == 'scissors') outcome = 'LOSE';
+            else if (playerSelection == 'scissors' && computerSelection == 'scissors') outcome = 'TIE';
+            else if (playerSelection == 'scissors' && computerSelection == 'paper') outcome = 'WIN';
+            else if (playerSelection == 'scissors' && computerSelection == 'rock') outcome = 'LOSE';
+
+            console.log(`${playerSelection} vs. ${computerSelection}: you ${outcome}!);
+        }
           
       </script>
 
